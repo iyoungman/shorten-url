@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: local
+
+---
+spring:
+  profiles: local
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: true
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shortenurl?useSSL=false&serverTimezone=Asia/Seoul
+    username: iyoungman
+    password: duddnjsgl912!
+
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+#default:
+#  path: "http://localhost:8080/shorten/"
+
+app:
+  path:"http://localhost:8080/shorten/"
+  random-length:10

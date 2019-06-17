@@ -2,7 +2,7 @@
 > Shoten-Url Conversion Server
 
 ## Motivation
-원하는 URL을 단축 URL로 변환하며 각 URl별 통계 정보를 얻기위해 만들었다
+원하는 URL을 단축 URL로 변환하며 각 URL별 통계 정보를 얻기위해 만들었다
 
 ## Fuction
 * 원하는 URL을 단축 URL로 변환

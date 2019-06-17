@@ -1,8 +1,8 @@
 package com.youngman.shortenurl.service.shorten;
 
 import com.youngman.shortenurl.exception.UserDefineException;
-import com.youngman.shortenurl.model.Shorten;
-import com.youngman.shortenurl.model.Statistics;
+import com.youngman.shortenurl.domain.entity.Shorten;
+import com.youngman.shortenurl.domain.entity.Statistics;
 import com.youngman.shortenurl.repository.ShortenRepository;
 import com.youngman.shortenurl.repository.StatisticsRepository;
 import lombok.RequiredArgsConstructor;

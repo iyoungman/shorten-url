@@ -12,6 +12,7 @@ public class UserDefineException extends RuntimeException {
 
 	private String originalErrorMessage;
 
+
 	public UserDefineException(String message) {
 		super(message);
 	}

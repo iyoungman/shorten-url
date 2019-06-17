@@ -1,6 +1,6 @@
 package com.youngman.shortenurl.exception;
 
-import com.youngman.shortenurl.model.dto.ErrorResponseDto;
+import com.youngman.shortenurl.domain.dto.ErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +25,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	@Autowired
 	private UrlPathHelper urlPathHelper;
 
+
 	@ExceptionHandler(UserDefineException.class)
 	public ResponseEntity handleUserDefineException(HttpServletRequest request, UserDefineException e) {
 		String requestURL = urlPathHelper.getOriginatingRequestUri(request);
@@ -39,7 +40,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		logger.info("Cause : " + e.getCause());
 		logger.info("======================================");
 
-		return new ResponseEntity<>(ErrorResponseDto.builder()
+		return new ResponseEntity<>(ErrorResponse.builder()
 				.userDefineErrorMessage(e.getMessage())
 				.originalErrorMessage(e.getOriginalErrorMessage())
 				.requestURL(requestURL)
@@ -59,7 +60,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		logger.info("Cause : " + e.getCause());
 		logger.info("======================================");
 
-		return new ResponseEntity<>(ErrorResponseDto.builder()
+		return new ResponseEntity<>(ErrorResponse.builder()
 				.userDefineErrorMessage("예상치 못한 예외 발생")
 				.originalErrorMessage(e.toString())
 				.requestURL(requestURL)

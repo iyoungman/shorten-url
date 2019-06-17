@@ -1,8 +1,13 @@
 {
   "properties": [
     {
-      "name": "app",
+      "name": "app.path.local",
       "type": "java.lang.String",
-      "description": "Description for app."
+      "description": "Description for app.path.local."
+    },
+    {
+      "name": "app.path.dev",
+      "type": "java.lang.String",
+      "description": "Description for app.path.dev."
     }
   ] }

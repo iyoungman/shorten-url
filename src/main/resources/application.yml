@@ -16,9 +16,9 @@ spring:
     open-in-view: true
 
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/shortenurl?useSSL=false&serverTimezone=Asia/Seoul
-    username: iyoungman
-    password: duddnjsgl912!
+    url: jdbc:mysql://yjinstance.cvfd8m7cgyo4.ap-northeast-2.rds.amazonaws.com:3306/shortenurl?useSSL=false&serverTimezone=Asia/Seoul
+    username: root
+    password: 11111111
 
   http:
     encoding:
@@ -26,9 +26,11 @@ spring:
       enabled: true
       force: true
 
-#default:
-#  path: "http://localhost:8080/shorten/"
+server:
+  port: 8098
 
+# Define Your Shorten URL(Domain)
 app:
-  path:"http://localhost:8080/shorten/"
-  random-length:10
+  path:
+    local: http://localhost:8098/shorten/
+    dev: http://54.180.67.243:8098/shorten/

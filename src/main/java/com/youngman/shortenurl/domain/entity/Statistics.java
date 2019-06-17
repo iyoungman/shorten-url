@@ -1,4 +1,4 @@
-package com.youngman.shortenurl.model;
+package com.youngman.shortenurl.domain.entity;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -31,6 +31,7 @@ public class Statistics {
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "shorten_id", nullable = false)
 	private Shorten shorten;
+
 
 	@Builder
 	public Statistics(Shorten shorten) {

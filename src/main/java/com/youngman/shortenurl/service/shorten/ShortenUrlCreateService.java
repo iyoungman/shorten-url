@@ -1,8 +1,7 @@
 package com.youngman.shortenurl.service.shorten;
 
-import com.sun.deploy.security.UserDeclinedException;
 import com.youngman.shortenurl.exception.UserDefineException;
-import com.youngman.shortenurl.model.Shorten;
+import com.youngman.shortenurl.domain.entity.Shorten;
 import com.youngman.shortenurl.repository.ShortenRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -12,14 +11,14 @@ import org.springframework.stereotype.Service;
 
 /**
  * Created by YoungMan on 2019-05-27.
- * Original Url -> Shorten Url
  */
 
 @Service
 @RequiredArgsConstructor
 public class ShortenUrlCreateService {
 
-	private final String DEFAULT_PATH = "http://localhost:8080/shorten/";
+	@Value("${app.path.dev}")
+	private String DEFAULT_PATH;
 	private final ShortenRepository shortenRepository;
 
 
@@ -60,6 +59,5 @@ public class ShortenUrlCreateService {
 	private boolean existsByRandomString(String randomString) {
 		return shortenRepository.existsByRandomString(randomString);
 	}
-
 
 }

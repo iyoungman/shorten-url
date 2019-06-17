@@ -1,6 +1,6 @@
 package com.youngman.shortenurl.repository;
 
-import com.youngman.shortenurl.model.Shorten;
+import com.youngman.shortenurl.domain.entity.Shorten;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

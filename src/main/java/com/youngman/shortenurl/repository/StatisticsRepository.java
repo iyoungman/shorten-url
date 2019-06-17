@@ -1,7 +1,6 @@
 package com.youngman.shortenurl.repository;
 
-import com.youngman.shortenurl.model.Statistics;
-import com.youngman.shortenurl.repository.custom.StatisticsRepositoryCustom;
+import com.youngman.shortenurl.domain.entity.Statistics;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

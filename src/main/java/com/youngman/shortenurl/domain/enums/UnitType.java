@@ -1,4 +1,4 @@
-package com.youngman.shortenurl.model.enums;
+package com.youngman.shortenurl.domain.enums;
 
 
 import com.youngman.shortenurl.service.statistics.DateUtils;
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  */
 
 @Getter
-public enum Unit {
+public enum UnitType {
 
 	hour {
 		public String convertLocalDateTimeToStr(LocalDateTime time) {

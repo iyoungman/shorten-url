@@ -1,4 +1,4 @@
-package com.youngman.shortenurl.model.dto;
+package com.youngman.shortenurl.domain.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -10,14 +10,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ErrorResponseDto {
+public class ErrorResponse {
 
 	private String userDefineErrorMessage;
 	private String originalErrorMessage;
 	private String requestURL;
 
+
 	@Builder
-	public ErrorResponseDto(String userDefineErrorMessage, String originalErrorMessage, String requestURL) {
+	public ErrorResponse(String userDefineErrorMessage, String originalErrorMessage, String requestURL) {
 		this.userDefineErrorMessage = userDefineErrorMessage;
 		this.originalErrorMessage = originalErrorMessage;
 		this.requestURL = requestURL;

@@ -1,4 +1,4 @@
-package com.youngman.shortenurl.model.dto;
+package com.youngman.shortenurl.domain.dto;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -13,19 +13,20 @@ import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class StatisticsTempDto {
+public class StatisticsTemp {
 
 	private LocalDateTime date;
 	private Long clicks;
 
+
 	@Builder
-	public StatisticsTempDto(LocalDateTime date, long clicks) {
+	public StatisticsTemp(LocalDateTime date, long clicks) {
 		this.date = date;
 		this.clicks = clicks;
 	}
 
-	public static StatisticsTempDto of(LocalDateTime date, long clicks) {
-		return StatisticsTempDto.builder()
+	public static StatisticsTemp of(LocalDateTime date, long clicks) {
+		return StatisticsTemp.builder()
 				.date(date)
 				.clicks(clicks)
 				.build();

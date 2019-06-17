@@ -1,4 +1,4 @@
-package com.youngman.shortenurl.model;
+package com.youngman.shortenurl.domain.entity;
 
 import lombok.AccessLevel;
 import lombok.Builder;

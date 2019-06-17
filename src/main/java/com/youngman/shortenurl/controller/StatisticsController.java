@@ -1,7 +1,7 @@
 package com.youngman.shortenurl.controller;
 
-import com.youngman.shortenurl.model.dto.StatisticsResponseDto;
-import com.youngman.shortenurl.model.enums.Unit;
+import com.youngman.shortenurl.domain.dto.StatisticsResponse;
+import com.youngman.shortenurl.domain.enums.UnitType;
 import com.youngman.shortenurl.service.statistics.StatisticsFetchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -21,9 +21,8 @@ public class StatisticsController {
 
 
 	@GetMapping
-	public List<StatisticsResponseDto> fetchStatisticsByShortenUrl(@RequestParam("shortenUrl") String shortenUrl,
-																   @RequestParam("unit") Unit unit) {
-
-		return statisticsFetchService.fetchStatisticsByShortenUrl(shortenUrl, unit);
+	public List<StatisticsResponse> fetchStatisticsByShortenUrl(@RequestParam("shortenUrl") String shortenUrl,
+																@RequestParam("unitType") UnitType unitType) {
+		return statisticsFetchService.fetchStatisticsByShortenUrl(shortenUrl, unitType);
 	}
 }

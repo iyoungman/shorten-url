@@ -1,4 +1,4 @@
-package com.youngman.shortenurl.model.dto;
+package com.youngman.shortenurl.domain.dto;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -11,12 +11,13 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ShortenUrlCreateRequestDto {
+public class ShortenUrlCreateRequest {
 
 	private String originalUrl;
 
+
 	@Builder
-	public ShortenUrlCreateRequestDto(String originalUrl) {
+	public ShortenUrlCreateRequest(String originalUrl) {
 		this.originalUrl = originalUrl;
 	}
 }

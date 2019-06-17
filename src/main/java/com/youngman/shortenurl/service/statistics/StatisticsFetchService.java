@@ -1,9 +1,9 @@
 package com.youngman.shortenurl.service.statistics;
 
 import com.youngman.shortenurl.exception.UserDefineException;
-import com.youngman.shortenurl.model.dto.StatisticsTempDto;
-import com.youngman.shortenurl.model.dto.StatisticsResponseDto;
-import com.youngman.shortenurl.model.enums.Unit;
+import com.youngman.shortenurl.domain.dto.StatisticsTemp;
+import com.youngman.shortenurl.domain.dto.StatisticsResponse;
+import com.youngman.shortenurl.domain.enums.UnitType;
 import com.youngman.shortenurl.repository.StatisticsRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
@@ -23,14 +23,14 @@ public class StatisticsFetchService {
 	private final StatisticsRepository statisticsRepository;
 
 
-	public List<StatisticsResponseDto> fetchStatisticsByShortenUrl(String shortenUrl, Unit unit) {
+	public List<StatisticsResponse> fetchStatisticsByShortenUrl(String shortenUrl, UnitType unitType) {
 
 		try {
-			List<StatisticsTempDto> statisticsTempDtos = statisticsRepository.
-					fetchStatisticsByShortenUrl(shortenUrlToRandomString(shortenUrl), unit);
+			List<StatisticsTemp> statisticsTemps = statisticsRepository.
+					fetchStatisticsByShortenUrl(shortenUrlToRandomString(shortenUrl), unitType);
 
-			return statisticsTempDtos.stream()
-					.map(dto -> StatisticsResponseDto.of(dto, unit))
+			return statisticsTemps.stream()
+					.map(dto -> StatisticsResponse.of(dto, unitType))
 					.collect(Collectors.toList());
 		} catch (Exception e) {
 			throw UserDefineException.builder()

@@ -20,4 +20,8 @@ ex) http://localhost:8098/shorten/JHMPWHEJ1D
 * 단축 URL에 대한 통계정보 확인
 ```text
 단축 URL에 대한 시간별, 날짜, 월별 접속 횟수
-```
+```  
+
+## Details
+* 컴파일 후 Swagger를 통해 Request와 Response 확인 가능(PostMan과 유사)  
+http://localhost:8080/swagger-ui.html

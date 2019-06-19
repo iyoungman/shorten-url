@@ -27,10 +27,9 @@ spring:
       force: true
 
 server:
-  port: 8098
+  port: 8080
 
 # Define Your Shorten URL(Domain)
 app:
   path:
-    local: http://localhost:8098/shorten/
-    dev: http://54.180.67.243:8098/shorten/
+    local: http://localhost:8080/shorten/

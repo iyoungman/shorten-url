@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ShortenUrlCreateService {
 
-	@Value("${app.path.dev}")
+	@Value("${app.path.local}")
 	private String DEFAULT_PATH;
 	private final ShortenRepository shortenRepository;
 

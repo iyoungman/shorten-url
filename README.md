@@ -1,5 +1,5 @@
 # Product Name
-> Shoten URL Conversion Server
+> Shoten URL Conversion Api
 
 ## Motivation
 원하는 URL을 단축 URL로 변환하며 각 URL별 통계 정보를 얻기위해 만들었다

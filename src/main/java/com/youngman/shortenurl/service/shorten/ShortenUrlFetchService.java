@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * Created by YoungMan on 2019-05-27.
+ * 단축 URL 을 Original UTL 로 리다이렉팅시 사용
  */
 
 @Service
@@ -19,6 +20,10 @@ public class ShortenUrlFetchService {
 	private final ShortenRepository shortenRepository;
 	private final StatisticsRepository statisticsRepository;
 
+
+	/**
+	 * 리다이렉팅을 위해 단축 URL 의 randomString 으로부터 기존 URL 조회
+	 */
 	public String fetchOriginalUrl(String randomString) {
 
 		try {
@@ -39,6 +44,10 @@ public class ShortenUrlFetchService {
 		);
 	}
 
+
+	/**
+	 * 리다이렉팅시 접속 정보 저장
+	 */
 	private void saveStatistics(Shorten shorten) {
 		statisticsRepository.save(
 				Statistics.of(shorten)

@@ -23,6 +23,9 @@ public class StatisticsFetchService {
 	private final StatisticsRepository statisticsRepository;
 
 
+	/**
+	 * 단축 URL 과 UnitType Enum 값을 통해 접속 통계정보 조회
+	 */
 	public List<StatisticsResponse> fetchStatisticsByShortenUrl(String shortenUrl, UnitType unitType) {
 
 		try {
@@ -40,10 +43,15 @@ public class StatisticsFetchService {
 		}
 	}
 
+
+	/**
+	 * DB 에서 통계정보를 가져오기 위해 단축 URL 을 랜덤스트링으로 변환
+	 */
 	private String shortenUrlToRandomString(String shortenUrl) {
 		shortenUrl = removeLastSlash(shortenUrl);
 		return StringUtils.right(shortenUrl, 10);
 	}
+
 
 	private String removeLastSlash(String shortenUrl) {
 		return StringUtils.removeEnd(shortenUrl, "/");

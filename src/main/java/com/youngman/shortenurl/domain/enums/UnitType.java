@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  * Created by YoungMan on 2019-05-27.
+ * 시간별, 날짜별, 월별 ENUM 클래스
  */
 
 @Getter

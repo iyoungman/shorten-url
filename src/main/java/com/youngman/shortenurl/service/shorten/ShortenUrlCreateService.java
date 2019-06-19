@@ -22,6 +22,9 @@ public class ShortenUrlCreateService {
 	private final ShortenRepository shortenRepository;
 
 
+	/**
+	 * OriginalURL 로 부터 단축 URL 생성
+	 */
 	public String createShortenUrl(String originalUrl) {
 
 		try {
@@ -41,10 +44,20 @@ public class ShortenUrlCreateService {
 		}
 	}
 
+
+	/**
+	 * https://eney.co.kr/ 처럼 OriginalURL 마지막에 슬래쉬가 있을 경우 제거
+	 */
 	private String removeLastSlash(String originalUrl) {
 		return StringUtils.removeEnd(originalUrl, "/");
 	}
 
+
+	/**
+	 * 랜덤 스트링 생성 함수
+	 * Apache 라이브러리 사용
+	 * 랜덤 스트링 생성 후 DB를 확인해 기존에 존재하는 랜덤 스트링인지 검사한다
+	 */
 	private String createRandomString() {
 
 		String randomString = "";

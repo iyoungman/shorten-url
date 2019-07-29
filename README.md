@@ -1,8 +1,8 @@
 # Product Name
 > Shoten URL Conversion Api
 
-## Motivation
-원하는 URL을 단축 URL로 변환하며 각 URL별 통계 정보를 얻기위해 만들었다
+## Introduce
+원하는 URL을 단축 URL로 변환하며 각 URL별 통계 정보를 얻기위해 만들었다.
 
 ## Fuction
 * 원하는 URL을 단축 URL로 변환
@@ -23,5 +23,5 @@ ex) http://localhost:8098/shorten/JHMPWHEJ1D
 ```  
 
 ## Details
-* 컴파일 후 Swagger를 통해 Request와 Response 확인 가능(PostMan과 유사)  
+* 컴파일 후 Swagger를 통해 Request와 Response 확인 가능  
 http://localhost:8080/swagger-ui.html

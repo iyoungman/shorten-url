@@ -16,9 +16,9 @@ spring:
     open-in-view: true
 
   datasource:
-    url: jdbc:mysql://yjinstance.cvfd8m7cgyo4.ap-northeast-2.rds.amazonaws.com:3306/shortenurl?useSSL=false&serverTimezone=Asia/Seoul
-    username: root
-    password: 11111111
+    url: # Your Database URL
+    username: # Your Database USER
+    password: # Your Database PASSWORD
 
   http:
     encoding:
